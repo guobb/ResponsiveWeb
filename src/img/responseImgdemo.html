@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>srcset-demo</title>
+    <style>
+        html * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        content img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <picture>
+            <source media="(min-width: 36em)"
+                    srcset="ad002.png 768w"/>
+            <source srcset="ad002-l.png 1600w"/>
+            <img src="ad001-m.png" class="img">
+        </picture>
+    </div>
+    <div class="content">
+        <img src="ad001.png" class="image" srcset="ad001.png 480w, ad001-m.png 800w, ad001-l.png 1600w"
+        sizes="(min-width:800px) calc(100vm -30em), 100vm"/>
+    </div>
+</body>
+</html>
